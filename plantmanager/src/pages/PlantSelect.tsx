@@ -21,7 +21,7 @@ export function PlantSelect(){
                 <Text style={styles.title}>Em qual ambiente</Text>
                 <Text style={styles.subtitle}>
                     voce quer colocar sua planta?
-                </Text>
+                </Text> 
             </View>
             <View>
                 <FlatList
