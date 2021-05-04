@@ -28,10 +28,16 @@ active=false,
     
     return (
        <RectButton
-        style={styles.container}
+        style={[
+            styles.container,
+            active && styles.containerActive    
+        ]}
         {...rest}
        >
-           <Text style={styles.text}>
+           <Text style={[
+               styles.text,
+               active && styles.textActive
+               ]}>
                {title}
            </Text>
        </RectButton>
@@ -47,8 +53,15 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         borderRadius: 12
     },
+    containerActive:{
+        backgroundColor: colors.green_light
+    },
     text:{
         color: colors.heading,
         fontFamily: fonts.text
+    },
+    textActive:{
+        fontFamily: fonts.heading,
+        color: colors.green_dark
     }
 })
