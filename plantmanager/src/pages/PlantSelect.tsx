@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import {
     View,
     Text,
@@ -10,10 +10,25 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { EnvironmentButton } from '../components/EnvironmentButton';
 
 import {Header} from '../components/Header';
+import api from '../services/api';
 import colors from '../styles/colors';
 import fonts from '../styles/fonts';
 
+interface EnvironmentProps{
+    key: string;
+    title: string;
+}
+
 export function PlantSelect(){
+    const [environments,setEnvironments] = useState<EnvironmentProps[]>([]);
+    useEffect(()=>{
+        async function fetchEnvironment(){
+            const {data} = await api.get('plants_environments');
+            setEnvironments(data);
+        }
+
+        fetchEnvironment();
+    },[])
     return (
         <SafeAreaView style={styles.container}>
             <View style={styles.header}>
@@ -25,9 +40,9 @@ export function PlantSelect(){
             </View>
             <View>
                 <FlatList
-                data={[1,2,3,4,5]}
+                data={environments}
                 renderItem={({item})=>(
-                    <EnvironmentButton title="cozinha" active></EnvironmentButton>
+                    <EnvironmentButton title={item.title} ></EnvironmentButton>
                 )}
                 horizontal
                 showsHorizontalScrollIndicator={false}
