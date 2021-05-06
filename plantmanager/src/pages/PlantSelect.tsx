@@ -24,7 +24,13 @@ export function PlantSelect(){
     useEffect(()=>{
         async function fetchEnvironment(){
             const {data} = await api.get('plants_environments');
-            setEnvironments(data);
+            setEnvironments([
+                {
+                    key:'all',
+                    title:'todos'
+                },
+                ...data
+            ]);
         }
 
         fetchEnvironment();
