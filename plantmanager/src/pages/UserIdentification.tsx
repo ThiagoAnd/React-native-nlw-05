@@ -7,9 +7,11 @@ import {
     KeyboardAvoidingView,
     TouchableWithoutFeedback,
     Platform,
-    Keyboard} from 'react-native';
+    Keyboard,
+    Alert} from 'react-native';
     import { SafeAreaView } from "react-native-safe-area-context";
     import { useNavigation } from '@react-navigation/core';
+    import AsyncStorage from '@react-native-async-storage/async-storage';
     import {Button} from '../components/Button';
     import colors from '../styles/colors';
     import fonts from '../styles/fonts';
@@ -33,7 +35,16 @@ export function UserIdentification(){
         setIsFilled(!!value)
         setName(value)
     }
-    function handleStart(){
+    async function handleStart(){
+        if(!name)
+            return Alert.alert('Me diz como chamar você 😉')
+        //O @ aqui embaixo é só um padrão da string, podia ser chamado so de usuario tudo isso 
+        //Aqui é guardar localmente o nome do usuario
+        //Como aqui é uma função async, é uma promisse(se vc passar o mouse no setItem), 
+        //então podemos colocar um await  na frente para esperar pegar o nome do usuario antes de prosseguir
+        //e um async na frente da função
+        await AsyncStorage.setItem('@plantmanager:user',name);
+        
         navigation.navigate('Confirmation');
     }
 
