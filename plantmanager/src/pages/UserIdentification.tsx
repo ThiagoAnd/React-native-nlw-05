@@ -43,9 +43,12 @@ export function UserIdentification(){
         //Como aqui é uma função async, é uma promisse(se vc passar o mouse no setItem), 
         //então podemos colocar um await  na frente para esperar pegar o nome do usuario antes de prosseguir
         //e um async na frente da função
-        await AsyncStorage.setItem('@plantmanager:user',name);
-        
-        navigation.navigate('Confirmation');
+        try{
+            await AsyncStorage.setItem('@plantmanager:user',name);
+            navigation.navigate('Confirmation');
+        } catch{
+            Alert.alert('Não foi possivel salvar o seu nome. 😥')
+        }
     }
 
     return(
