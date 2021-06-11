@@ -56,7 +56,7 @@ export function Confirmation(){
                     <Button 
                     
                     onPress={handleStart}
-                    title={'Começar'}/>
+                    title={buttonTitle}/>
                 </View>
             </View>
         </SafeAreaView>

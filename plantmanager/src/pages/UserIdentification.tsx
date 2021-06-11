@@ -50,7 +50,7 @@ export function UserIdentification(){
                 subtitle: 'Agora vamos começar a cuidar das suas plantinhas com muito cuidado',
                 buttonTitle: 'Começar',
                 icon: 'smile',
-                nextScreen: 'MyPlants'
+                nextScreen: 'PlantSelect'
             });
         } catch{
             Alert.alert('Não foi possivel salvar o seu nome. 😥')

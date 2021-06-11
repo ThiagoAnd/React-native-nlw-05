@@ -12,7 +12,7 @@ import {
 } from 'react-native'
 import { SafeAreaView } from "react-native-safe-area-context";
 import {SvgFromUri} from 'react-native-svg';
-import {useRoute} from '@react-navigation/core';
+import {useNavigation, useRoute} from '@react-navigation/core';
 import DateTimePicker,{Event} from '@react-native-community/datetimepicker';
 
 import { Button } from '../components/Button';
@@ -20,7 +20,7 @@ import waterdrop from '../assets/waterdrop.png';
 import colors from '../styles/colors';
 import fonts from '../styles/fonts';
 import { format, isBefore } from 'date-fns';
-import { PlantProps, savePlant,loadPlant } from '../libs/storage';
+import { PlantProps, savePlant } from '../libs/storage';
 
 interface Params{
     plant: PlantProps
@@ -32,6 +32,8 @@ export function PlantSave(){
     const [showDatePicker,setShowDatePicker] = useState(Platform.OS == 'ios');
     const route = useRoute();
     const {plant} = route.params as Params;
+
+    const navigation = useNavigation();
 
     function handleChangeTime(event: Event,dateTime: Date | undefined){
         if(Platform.OS == 'android' ){
@@ -58,7 +60,14 @@ export function PlantSave(){
             await savePlant({
                 ...plant,
                 dateTimeNotification: selectedateTime
-            })
+            });
+            navigation.navigate('Confirmation',{
+                title: 'Tudo certo',
+                subtitle: 'Fique tranquilo que sempre vamos lembrar você de cuidar da sua plantinha com muito cuidado!',
+                buttonTitle: 'Muito obrigado :D',
+                icon: 'hug',
+                nextScreen: 'MyPlants'
+            });
         } catch{
             Alert.alert('Não foi possivel salvar. 😔')
         }
