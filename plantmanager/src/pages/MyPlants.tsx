@@ -4,24 +4,54 @@ import {
     View,
     Text,
     Image,
-    FlatList
+    FlatList,
+    Alert
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { Header } from '../components/Header';
 import waterdrop from '../assets/waterdrop.png';
 
 import colors from '../styles/colors';
-import { loadPlant, PlantProps } from '../libs/storage';
+import { loadPlant, PlantProps, StoragePlantProps } from '../libs/storage';
 import { formatDistance } from 'date-fns';
 import { pt } from 'date-fns/locale';
 import fonts from '../styles/fonts';
 import { PlantCardSecondary } from '../components/PlantCardSecondary';
+import { Load } from '../components/Load';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export function MyPlants(){
     const [myPlants,setMyPlants] = useState<PlantProps[]>([]);
     const [loading,setLoading] = useState(true);
     const [nextWaterd,setNextWaterd] = useState<string>();
 
+    function handleRemove(plant: PlantProps){
+        Alert.alert('Remover',`Deseja remover a ${plant.name}?`,[
+            {
+                text: 'Não 🙏',
+                style: 'cancel'
+            },
+            {
+                text: 'Sim 😥',
+                onPress: async () => {
+                    try{
+                        const data = await AsyncStorage.getItem('@plantmanager:plants');
+                        const plants  = data ? (JSON.parse(data) as StoragePlantProps) : {};
+
+                        delete plants[plant.id];
+                        await AsyncStorage.setItem(
+                            '@plantmanager:plants',
+                            JSON.stringify(plants);
+                        );
+                        setMyPlants((oldDataa) =>)
+
+                    } catch(error){
+
+                    }
+                }
+            }
+        ])
+    }
     useEffect(() =>{
         async function loadStorageData(){
             const plantsStoraged  = await loadPlant();
@@ -40,7 +70,11 @@ export function MyPlants(){
         }
 
         loadStorageData();
-    })
+    },[])
+
+    if(loading){
+        return <Load/>
+    }
     return(
         <SafeAreaView style={styles.container}>
             <Header/>
@@ -62,6 +96,7 @@ export function MyPlants(){
                         keyExtractor={(item) => String(item.id)}
                         renderItem={({item}) => (
                             <PlantCardSecondary
+                            handleRemove={()=> {handleRemove(item)}}
                             data={item}
                             />
                         )}

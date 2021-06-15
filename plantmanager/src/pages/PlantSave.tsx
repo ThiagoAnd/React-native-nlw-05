@@ -73,59 +73,65 @@ export function PlantSave(){
         }
     }
     return(
+        <ScrollView
+        showsHorizontalScrollIndicator={false}
+        contentContainerStyle={styles.container}
+            >
         <SafeAreaView style={styles.container}>
-            <View style={styles.plantInfo}>
-                <SvgFromUri
-                    uri={plant.photo}
-                    height={150}
-                    width={150}
-                />
-                <Text style={styles.plantName}>
-                    {plant.name}
-                </Text>
-                <Text style={styles.plantAbout}>
-                    {plant.about}
-                </Text>
-            </View>
-            <View style={styles.controller}>
-                <View style={styles.tipContainer}>
-                    <Image
-                        source={waterdrop}
-                        style={styles.tipImage}
+           
+                <View style={styles.plantInfo}>
+                    <SvgFromUri
+                        uri={plant.photo}
+                        height={150}
+                        width={150}
                     />
-                    <Text style={styles.tipText}>
-                        {plant.water_tips}
+                    <Text style={styles.plantName}>
+                        {plant.name}
+                    </Text>
+                    <Text style={styles.plantAbout}>
+                        {plant.about}
                     </Text>
                 </View>
-
-                <Text style={styles.alertLabel}>
-                    Escolha o melhor horario para ser lembrado:
-                </Text>
-                
-                {showDatePicker && (
-                <DateTimePicker
-                    value={selectedateTime}
-                    mode="time"
-                    display="spinner"
-                    onChange={handleChangeTime}
-                />
-                )}
-
-                {Platform.OS == 'android' && (
-                    <TouchableOpacity 
-                        style={styles.dateTimePickerButton}
-                        onPress={handleOpenDateTipePickerForAndroid}>
-                        <Text style={styles.dateTimePickerText}>
-                            {`Mudar ${format(selectedateTime,'HH:mm')}`}
+                <View style={styles.controller}>
+                    <View style={styles.tipContainer}>
+                        <Image
+                            source={waterdrop}
+                            style={styles.tipImage}
+                        />
+                        <Text style={styles.tipText}>
+                            {plant.water_tips}
                         </Text>
-                    </TouchableOpacity>
-                )}
-                <Button
-                    title="Cadastrar planta"
-                    onPress={handleSave}
-                />
-            </View>
-        </SafeAreaView>
+                    </View>
+
+                    <Text style={styles.alertLabel}>
+                        Escolha o melhor horario para ser lembrado:
+                    </Text>
+                    
+                    {showDatePicker && (
+                    <DateTimePicker
+                        value={selectedateTime}
+                        mode="time"
+                        display="spinner"
+                        onChange={handleChangeTime}
+                    />
+                    )}
+
+                    {Platform.OS == 'android' && (
+                        <TouchableOpacity 
+                            style={styles.dateTimePickerButton}
+                            onPress={handleOpenDateTipePickerForAndroid}>
+                            <Text style={styles.dateTimePickerText}>
+                                {`Mudar ${format(selectedateTime,'HH:mm')}`}
+                            </Text>
+                        </TouchableOpacity>
+                    )}
+                    <Button
+                        title="Cadastrar planta"
+                        onPress={handleSave}
+                    />
+                </View>
+            </SafeAreaView>
+        </ScrollView>
     )
 }
 
@@ -136,7 +142,7 @@ const styles = StyleSheet.create({
         backgroundColor: colors.shape
     },
     plantInfo:{
-        flex:2,
+        flex:1,
         paddingHorizontal:30,
         paddingVertical:50,
         alignItems: 'center',
