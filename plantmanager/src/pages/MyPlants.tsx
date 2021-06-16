@@ -12,13 +12,12 @@ import { Header } from '../components/Header';
 import waterdrop from '../assets/waterdrop.png';
 
 import colors from '../styles/colors';
-import { loadPlant, PlantProps, StoragePlantProps } from '../libs/storage';
+import { loadPlant, PlantProps, removePlant } from '../libs/storage';
 import { formatDistance } from 'date-fns';
 import { pt } from 'date-fns/locale';
 import fonts from '../styles/fonts';
 import { PlantCardSecondary } from '../components/PlantCardSecondary';
 import { Load } from '../components/Load';
-import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export function MyPlants(){
     const [myPlants,setMyPlants] = useState<PlantProps[]>([]);
@@ -35,18 +34,13 @@ export function MyPlants(){
                 text: 'Sim 😥',
                 onPress: async () => {
                     try{
-                        const data = await AsyncStorage.getItem('@plantmanager:plants');
-                        const plants  = data ? (JSON.parse(data) as StoragePlantProps) : {};
-
-                        delete plants[plant.id];
-                        await AsyncStorage.setItem(
-                            '@plantmanager:plants',
-                            JSON.stringify(plants);
+                        await removePlant(plant.id);
+                        setMyPlants((oldData) =>
+                            oldData.filter((item) => item.id != plant.id)
                         );
-                        setMyPlants((oldDataa) =>)
 
                     } catch(error){
-
+                        Alert.alert("Não foi possivel remover! 😥");
                     }
                 }
             }
