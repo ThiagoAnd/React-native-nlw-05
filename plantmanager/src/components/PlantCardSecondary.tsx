@@ -2,12 +2,11 @@ import React from 'react';
 import {Text,StyleSheet, View,Animated} from 'react-native';
 import {RectButton,RectButtonProps} from 'react-native-gesture-handler';
 import Swipeable from 'react-native-gesture-handler/Swipeable';
-import colors from '../styles/colors';
-import fonts from '../styles/fonts';
 import {SvgFromUri} from 'react-native-svg';
 import { Feather } from '@expo/vector-icons';
 
-
+import colors from '../styles/colors';
+import fonts from '../styles/fonts';
 interface PlantProps extends RectButtonProps
 {
     data: {
@@ -33,28 +32,24 @@ export const PlantCardSecondary = ({data,handleRemove, ...rest}: PlantProps) => 
                                 name="trash" 
                                 size={32} 
                                 color={colors.white}
-
                             />
-
-                           
-
                         </RectButton>
                     </View>
                 </Animated.View>
             )}
         >
             <RectButton
-            style={styles.container}
-            {...rest}
+                style={styles.container}
+                {...rest}
             >
                 <SvgFromUri 
-                uri={data.photo} 
-                width={50} 
-                height={50}/>
-                
-                <Text
-                style={styles.title}
-                >{data.name}</Text>
+                    uri={data.photo} 
+                    width={50} 
+                    height={50}
+                />
+                <Text style={styles.title} >
+                    {data.name}
+                </Text>
                 <View style={styles.details}>
                     <Text style={styles.timeLabel}>
                         Regar as 
@@ -78,7 +73,6 @@ const styles = StyleSheet.create({
         alignItems:'center',
         backgroundColor: colors.shape,
         marginVertical:5
-        
     },
     title:{
         flex:1,
@@ -112,6 +106,5 @@ const styles = StyleSheet.create({
         position:'relative',
         right:20,
         paddingLeft:15
-
     }
 })

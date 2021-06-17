@@ -7,18 +7,16 @@ import {
     Dimensions
 } from 'react-native';
 import { SafeAreaView } from "react-native-safe-area-context";
+import { useNavigation } from '@react-navigation/core';
 import {Entypo} from '@expo/vector-icons';
 
 import {Button} from '../components/Button';
 import wateringImg from '../assets/watering.png';
 import colors from '../styles/colors';
 import fonts from '../styles/fonts';
-import { useNavigation } from '@react-navigation/core';
 
 export function Welcome(){
-
     const navigation = useNavigation();
-
     function handleStart(){
         navigation.navigate('UserIdentification');
     }
@@ -29,7 +27,7 @@ export function Welcome(){
                 <Text style={styles.title}>
                     Gerencie{'\n'} suas plantas de{'\n'} forma facil
                 </Text>
-            
+                
                 <Image 
                     source={wateringImg} 
                     style={styles.image}
@@ -42,10 +40,10 @@ export function Welcome(){
                 </Text>
             
                 <Button 
-                onPress={handleStart}
-                title="Continuar"/>
-
-                
+                    onPress={handleStart}
+                    title="Continuar"
+                />
+   
             </View>
         </SafeAreaView>
     )
@@ -83,5 +81,4 @@ const styles = StyleSheet.create({
         fontSize:24,
         color: colors.green
     }
-
-})
+});

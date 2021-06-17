@@ -6,12 +6,11 @@ import {
     StyleSheet
     
 } from 'react-native';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 import userImg from '../assets/fotoThiago.png';
 import colors from '../styles/colors';
 import fonts from '../styles/fonts';
-
-import AsyncStorage from '@react-native-async-storage/async-storage';
 
 export function Header(){
     const [userName,setUserName] = useState<string>();
@@ -20,7 +19,6 @@ export function Header(){
         async function loadStoragedUserName(){
            const user = await AsyncStorage.getItem('@plantmanager:user');
            setUserName(user || "");
-
         }
 
         loadStoragedUserName();
@@ -42,11 +40,9 @@ const styles = StyleSheet.create({
     container:{
         width:'100%',
         flexDirection: 'row',
-       justifyContent: 'space-between',
-       alignItems:'center',
+        justifyContent: 'space-between',
+        alignItems:'center',
         paddingVertical: 30
-       
-       
     },
     greetings:{
         fontSize:32,
@@ -58,7 +54,6 @@ const styles = StyleSheet.create({
         fontFamily: fonts.heading,
         color: colors.heading,
         lineHeight: 40  
-
     },
     image:{
         width:70,

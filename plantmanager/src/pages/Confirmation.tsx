@@ -6,11 +6,10 @@ import {
 } from 'react-native'
 import { SafeAreaView } from "react-native-safe-area-context";
 import { useNavigation, useRoute } from '@react-navigation/core';
-import {Button} from '../components/Button';
 
+import {Button} from '../components/Button';
 import colors from '../styles/colors';
 import fonts from '../styles/fonts';
-
 interface Params {
     title: string;
     subtitle: string;
@@ -23,7 +22,6 @@ const emojis = {
     smile:'😁'
 }
 export function Confirmation(){
-
     const navigation = useNavigation();
     const routes = useRoute();
 
@@ -54,9 +52,9 @@ export function Confirmation(){
                 </Text>
                 <View style={style.footer}>
                     <Button 
-                    
-                    onPress={handleStart}
-                    title={buttonTitle}/>
+                        onPress={handleStart}
+                        title={buttonTitle}
+                    />
                 </View>
             </View>
         </SafeAreaView>

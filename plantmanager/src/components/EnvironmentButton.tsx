@@ -16,14 +16,12 @@ import fonts from '../styles/fonts';
 interface EnvironmentButtonProps extends RectButtonProps{
     title:string;
     active?: boolean;
-
 }
 
 export function EnvironmentButton({
-title,
-active=false,
-...rest
-
+    title,
+    active=false,
+    ...rest
 }: EnvironmentButtonProps){
     
     return (

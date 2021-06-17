@@ -6,20 +6,18 @@ import { UserIdentification } from '../pages/UserIdentification';
 import { Confirmation } from '../pages/Confirmation';
 import { PlantSave } from '../pages/PlantSave';
 import AuthRoutes from './tab.routes';
-
-
-
 import colors from  '../styles/colors';
+
 const stackRoutes = createStackNavigator();
 
 const AppRoutes: React.FC = () => (
     <stackRoutes.Navigator
-    headerMode="none"
-    screenOptions={{
-        cardStyle:{
-            backgroundColor:colors.white
-        }
-    }}
+        headerMode="none"
+        screenOptions={{
+            cardStyle:{
+                backgroundColor:colors.white
+            }
+        }}
     >
         <stackRoutes.Screen
             name="Welcome"

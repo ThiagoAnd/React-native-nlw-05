@@ -1,6 +1,4 @@
 import React,{useEffect} from 'react';
-import { Welcome } from './src/pages/Welcome';
-import  Routes  from './src/routes';
 import {
   useFonts,
   Jost_400Regular,
@@ -8,7 +6,10 @@ import {
 } from '@expo-google-fonts/jost';
 import AppLoading from 'expo-app-loading';
 import * as Notifications from 'expo-notifications';
+
 import { PlantProps } from './src/libs/storage';
+import { Welcome } from './src/pages/Welcome';
+import  Routes  from './src/routes';
 
 export default function App(){
 const [fontsLoaded] = useFonts({
@@ -21,13 +22,11 @@ useEffect(() => {
       const data = notification.request.content.data.plant as PlantProps;
       console.log(data);
     });
-
     return () => subscription.remove();
 },[])
 
 if(!fontsLoaded)
   return <AppLoading/>
-
 
   return (
     <Routes/>

@@ -8,13 +8,13 @@ import {
     Alert
 } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
-import { Header } from '../components/Header';
-import waterdrop from '../assets/waterdrop.png';
-
-import colors from '../styles/colors';
-import { loadPlant, PlantProps, removePlant } from '../libs/storage';
 import { formatDistance } from 'date-fns';
 import { pt } from 'date-fns/locale';
+
+import { Header } from '../components/Header';
+import waterdrop from '../assets/waterdrop.png';
+import colors from '../styles/colors';
+import { loadPlant, PlantProps, removePlant } from '../libs/storage';
 import fonts from '../styles/fonts';
 import { PlantCardSecondary } from '../components/PlantCardSecondary';
 import { Load } from '../components/Load';
@@ -38,7 +38,6 @@ export function MyPlants(){
                         setMyPlants((oldData) =>
                             oldData.filter((item) => item.id != plant.id)
                         );
-
                     } catch(error){
                         Alert.alert("Não foi possivel remover! 😥");
                     }
@@ -62,7 +61,6 @@ export function MyPlants(){
             setMyPlants(plantsStoraged);
             setLoading(false);
         }
-
         loadStorageData();
     },[])
 
@@ -72,35 +70,33 @@ export function MyPlants(){
     return(
         <SafeAreaView style={styles.container}>
             <Header/>
-                <View style={styles.spotlight}>
-                    <Image 
-                        source={waterdrop}
-                        style={styles.spotlightImage}
-                    />
-                    <Text style={styles.spotlightText}>
-                        {nextWaterd}
-                    </Text>
-                </View>
-                <View style={styles.plants}>
-                    <Text style={styles.plantTitle}>
-                        Próximas regadas
-                    </Text>
-                    <FlatList
-                        data={myPlants}
-                        keyExtractor={(item) => String(item.id)}
-                        renderItem={({item}) => (
-                            <PlantCardSecondary
+            <View style={styles.spotlight}>
+                <Image 
+                    source={waterdrop}
+                    style={styles.spotlightImage}
+                />
+                <Text style={styles.spotlightText}>
+                    {nextWaterd}
+                </Text>
+            </View>
+            <View style={styles.plants}>
+                <Text style={styles.plantTitle}>
+                    Próximas regadas
+                </Text>
+                <FlatList
+                    data={myPlants}
+                    keyExtractor={(item) => String(item.id)}
+                    renderItem={({item}) => (
+                        <PlantCardSecondary
                             handleRemove={()=> {handleRemove(item)}}
                             data={item}
-                            />
-                        )}
-                         showsVerticalScrollIndicator={false}
-                         contentContainerStyle= {{flex:1}}  
-                    />
-                </View>
-           
+                        />
+                    )}
+                        showsVerticalScrollIndicator={false}
+                        contentContainerStyle= {{flex:1}}  
+                />
+            </View>
         </SafeAreaView>
-       
     )
 }
 
@@ -130,7 +126,6 @@ const styles = StyleSheet.create({
         flex:1,
         color: colors.blue,
         paddingHorizontal: 20,
-        
     },
     plants:{
         flex:1,
@@ -142,4 +137,4 @@ const styles = StyleSheet.create({
         color: colors.heading,
         marginVertical: 20
     }
-})
+});

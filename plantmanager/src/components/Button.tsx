@@ -11,9 +11,11 @@ interface ButtonProps extends TouchableOpacityProps{
 export function Button({title,...rest}: ButtonProps){
 
     return(
-        <TouchableOpacity style={styles.container} 
-        activeOpacity={0.8} 
-        {...rest}>
+        <TouchableOpacity 
+            style={styles.container} 
+            activeOpacity={0.8} 
+            {...rest}
+        >
             <Text style={styles.buttonText}>
                 {title}
             </Text>
@@ -21,9 +23,7 @@ export function Button({title,...rest}: ButtonProps){
     )
 }
 
-
 const styles = StyleSheet.create({
-
     container:{
         backgroundColor: colors.green,
         justifyContent: 'center',
@@ -33,13 +33,9 @@ const styles = StyleSheet.create({
         height:56,
         paddingHorizontal:10
     },
-
     buttonText:{
         color: colors.white,
         fontSize:16,
         fontFamily: fonts.heading
     }
-
- 
-
 })
