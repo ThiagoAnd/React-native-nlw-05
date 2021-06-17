@@ -90,10 +90,10 @@ export function MyPlants(){
                         <PlantCardSecondary
                             handleRemove={()=> {handleRemove(item)}}
                             data={item}
+                            
                         />
                     )}
                         showsVerticalScrollIndicator={false}
-                        contentContainerStyle= {{flex:1}}  
                 />
             </View>
         </SafeAreaView>

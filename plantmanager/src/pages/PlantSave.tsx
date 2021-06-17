@@ -77,8 +77,8 @@ export function PlantSave(){
                 <View style={styles.plantInfo}>
                     <SvgFromUri
                         uri={plant.photo}
-                        height={150}
-                        width={150}
+                        height={140}
+                        width={140}
                     />
                     <Text style={styles.plantName}>
                         {plant.name}
@@ -132,12 +132,12 @@ export function PlantSave(){
 
 const styles = StyleSheet.create({
     container:{
-        flex:1,
+        flexGrow:1,
         justifyContent: 'space-between',
         backgroundColor: colors.shape
     },
     plantInfo:{
-        flex:1,
+        flex:2,
         paddingHorizontal:30,
         paddingVertical:50,
         alignItems: 'center',
