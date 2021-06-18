@@ -1,5 +1,5 @@
 <h1 align="center">
-   <img src="Documentacao/GitReadMe/logo.png?raw=true" width="200" />
+   <img src="Documentacao/GitReadMe/logo.png?raw=true" width="300" />
 </h1>
 <br><br><br><br>
 
@@ -20,6 +20,7 @@ React Native, and its purpose is to help the user remember the time to water the
 
 <div>
 <div align="center">
+   <br>
    <img src="Documentacao/GitReadMe/androidLogo.png" width="200" />
    &nbsp;&nbsp;&nbsp;
    <img src="Documentacao/GitReadMe/android.gif" width="200" height="352"  />
