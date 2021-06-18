@@ -12,7 +12,7 @@
 
 # Overview
 
-<p>Created in the 5th edition of Rocketseat NLW, under the mentorship of instructor Rodrigo Gonçalves, PlantManager is an application created in
+<p>  Created in the 5th edition of Rocketseat NLW, under the mentorship of instructor Rodrigo Gonçalves, PlantManager is an application created in
 React Native, and its purpose is to help the user remember the time to water their plants, in a well-organized way.</p>
 <br>
 
