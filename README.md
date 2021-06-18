@@ -7,7 +7,7 @@
 - [Overview](#overview)
 - [Preview](#preview)
 - [Requirements](#requirements)
-- [Install](#install/deploy)
+- [Install](#install-and-deploy)
 <br>
 
 # Overview
@@ -49,11 +49,11 @@ React Native, and its purpose is to help the user remember the time to water the
 
 <br>
 
-# Install/deploy
+# Install and deploy
 
 Clone o repositório ou faça o download do .zip e extraia em uma pasta no windows
 
-A partir da pasta raiz do diretorio do projeto (/plantmanager) execute o comando abaixo para instalar as dependencias:
+A partir da pasta principal do projeto (/plantmanager) execute o comando abaixo para instalar as dependencias:
 ```bash
 npm install
 ```
@@ -61,8 +61,20 @@ Descruba o seu endereço de IPv4 no prompt de comando do windows pelo seguinte c
 ```bash
 ipconfig
 ```
-No projeto, substitua na linha 4 do arquivo api.ts com o Ip que se encontra, pelo da sua máquina
-A partir da pasta raiz do diretório do projeto(/plantmanager) execute o comando abaixo substituindo o IP pelo da sua máquina:
+No projeto, substitua na linha 4 do arquivo api.ts com o Ip que se encontra, pelo da sua máquina, agora vamos iniciar o servidor da API
+
+A partir da pasta principal do projeto(/plantmanager) execute o comando abaixo substituindo o IP pelo da sua máquina:
 ```bash
-ipconfig
+npx json-server ./src/services/server.json --host <IP> --port 3333
 ```
+Agora vamos iniciar de fato a aplicação, execute o comando abaixo a partir da pasta principal do projeto:
+```bash
+expo start
+```
+
+A partir desse momento será carregado uma pagina no browser (caso não carregar, entre no endereço <strong> http://localhost:19002</strong>)
+
+Por ela você terá varias opções para para iniciar a aplicação escolhendo alguma opção do lado inferior esquerdo da tela
+
+Qualquer duvida ou problema na execução dos passos pode entrar em contato.
+
