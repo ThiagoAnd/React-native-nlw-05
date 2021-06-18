@@ -20,6 +20,7 @@ React Native, and its purpose is to help the user remember the time to water the
 
 <div>
 <div align="center">
+   <br>
    <img src="Documentacao/GitReadMe/androidLogo.png" width="200" />
    &nbsp;&nbsp;&nbsp;
    <img src="Documentacao/GitReadMe/android.gif" width="200" height="352"  />
