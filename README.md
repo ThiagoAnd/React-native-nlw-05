@@ -7,7 +7,7 @@
 - [Overview](#overview)
 - [Preview](#preview)
 - [Requirements](#requirements)
-- [Install](#install)
+- [Install](#install/deploy)
 <br>
 
 # Overview
@@ -44,10 +44,25 @@ React Native, and its purpose is to help the user remember the time to water the
 - [x] Real Android device for running the application if you are using windows is one option
 - [x] Real Iphone device for running the application if you are using Windows is one option
 - [x] Expo go installed on the chosen device for running the application
+- [x] Os passos da instalação e deploy foram feitos em uma maquina com Windows 
 
 
 <br>
 
-# Install
+# Install/deploy
 
+Clone o repositório ou faça o download do .zip e extraia em uma pasta no windows
 
+A partir da pasta raiz do diretorio do projeto (/plantmanager) execute o comando abaixo para instalar as dependencias:
+```bash
+npm install
+```
+Descruba o seu endereço de IPv4 no prompt de comando do windows pelo seguinte comando: 
+```bash
+ipconfig
+```
+No projeto, substitua na linha 4 do arquivo api.ts com o Ip que se encontra, pelo da sua máquina
+A partir da pasta raiz do diretório do projeto(/plantmanager) execute o comando abaixo substituindo o IP pelo da sua máquina:
+```bash
+ipconfig
+```
