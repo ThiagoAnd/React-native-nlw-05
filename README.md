@@ -4,13 +4,16 @@
 Menu
 
 # Content
+- [Overview](#install)
+ [Titles](#titles)
 
-# Overview
+
+#### Overview
 
 <p>Created in the 5th edition of Rocketseat NLW, under the mentorship of instructor Rodrigo Gonçalves, PlantManager is an application created in
 React Native, and its purpose is to help the user remember the time to water their plants, in a well-organized way.</p>
 
-# Preview
+# Titles
 <div>
 <div align="center">
    <img src="Documentacao/GitReadMe/android.gif" width="200" height="352"  />
@@ -21,6 +24,6 @@ React Native, and its purpose is to help the user remember the time to water the
 
 </div>
 
-# Install
+##### Install
 
 
