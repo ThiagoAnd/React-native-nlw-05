@@ -21,15 +21,18 @@ React Native, e tem por objetivo ajudar o usuário a lembrar da hora de regar su
 <div>
 <div align="center">
    <br>
-   <img src="Documentacao/GitReadMe/androidLogo.png" width="200" />
-   &nbsp;&nbsp;&nbsp;
    <img src="Documentacao/GitReadMe/android.gif" width="200" height="352"  />
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
    <img src="Documentacao/GitReadMe/iphone5s.gif" width="200" />
-   &nbsp;&nbsp;&nbsp;
-   <img src="Documentacao/GitReadMe/iosLogo.jpg" width="200" />
-   
 </div>
+   <br>
+    <div align="center">
+       <h3>
+          <img src="Documentacao/GitReadMe/androidLogo.png?raw=true" width="80" />
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <img src="Documentacao/GitReadMe/iosLogo.jpg?raw=true" width="80" /> 
+   </div>
    <br>
    <a href="https://www.figma.com/file/IhQRtrOZdu3TrvkPYREzOy/PlantManager/duplicate?node-id=0%3A1">Link para o layout oficial no Figma</a>
 </div>
