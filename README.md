@@ -40,7 +40,7 @@ React Native, e tem por objetivo ajudar o usuário a lembrar da hora de regar su
 
 # Requirements
 
-- [x] Vscode
+- [x] Vscode para facilitar a execução dos comandos e modificar algum código no projeto caso queira
 - [x] NodeJs
 - [x] Android studio e android virtual device (AVD) criado para rodar a aplicação é uma das opções
 - [x] Um celular android para rodar a aplicação é uma das opções
