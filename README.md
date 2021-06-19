@@ -44,7 +44,7 @@ React Native, e tem por objetivo ajudar o usuário a lembrar da hora de regar su
 - [x] NodeJs
 - [x] Android studio e android virtual device (AVD) criado para rodar a aplicação é uma das opções
 - [x] Um celular android para rodar a aplicação é uma das opções
-- [x] Um celular iPHONE para rodar a aplicação (unica maneira no Windows para sistema ios) é uma das opções
+- [x] Um celular Iphone para rodar a aplicação (unica maneira no Windows para sistema ios) é uma das opções
 - [x] Expo go deve estar instalado no aparelho escolhido para rodar a aplicação
 - [x] Os passos da instalação e deploy foram feitos em uma maquina com Windows 
 
