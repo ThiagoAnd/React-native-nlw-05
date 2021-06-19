@@ -12,8 +12,8 @@
 
 # Overview
 
-<p>Created in the 5th edition of Rocketseat NLW, under the mentorship of instructor Rodrigo Gonçalves, PlantManager is an application created in
-React Native, and its purpose is to help the user remember the time to water their plants, in a well-organized way.</p>
+<p>Criado na 5ª edição do Rocketseat NLW, sob a orientação do instrutor Rodrigo Gonçalves, o PlantManager é um aplicativo criado em
+React Native, e tem por objetivo ajudar o usuário a lembrar da hora de regar suas plantas, de forma bem organizada.</p>
 <br>
 
 # Preview
@@ -39,10 +39,10 @@ React Native, and its purpose is to help the user remember the time to water the
 
 - [x] Vscode
 - [x] NodeJs
-- [x] Android studio and android virtual device (AVD) created for running the application is one option
-- [x] Real Android device for running the application if you are using windows is one option
-- [x] Real Iphone device for running the application if you are using Windows is one option
-- [x] Expo go installed on the chosen device for running the application
+- [x] Android studio e android virtual device (AVD) criado para rodar a aplicação é uma das opções
+- [x] Um celular android para rodar a aplicação é uma das opções
+- [x] Um celular iPHONE para rodar a aplicação (unica maneira no Windows para sistema ios) é uma das opções
+- [x] Expo go deve estar instalado no aparelho escolhido para rodar a aplicação
 - [x] Os passos da instalação e deploy foram feitos em uma maquina com Windows 
 
 
