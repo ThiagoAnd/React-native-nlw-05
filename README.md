@@ -69,7 +69,7 @@ ipconfig
 ```bash
 npx json-server ./src/services/server.json --host <IP> --port 3333
 ```
-* Agora vamos iniciar de fato a aplicação, execute o comando abaixo a partir da pasta principal do projeto:
+* Agora vamos fazer o deploy da aplicação, execute o comando abaixo a partir da pasta principal do projeto:
 ```bash
 expo start
 ```
