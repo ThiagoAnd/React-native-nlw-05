@@ -25,7 +25,7 @@ React Native, and its purpose is to help the user remember the time to water the
    &nbsp;&nbsp;&nbsp;
    <img src="Documentacao/GitReadMe/android.gif" width="200" height="352"  />
    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-   <img src="Documentacao/GitReadMe/iphone5s.gif" width="200" />
+   <img src="Documentacao/GitReadMe/iphone8.gif" width="200" />
    &nbsp;&nbsp;&nbsp;
    <img src="Documentacao/GitReadMe/iosLogo.jpg" width="200" />
    
