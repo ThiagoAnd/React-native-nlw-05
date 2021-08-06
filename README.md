@@ -15,6 +15,7 @@
 <p>Criado na 5ª edição do Rocketseat NLW, sob a orientação do instrutor Rodrigo Gonçalves, o PlantManager é um aplicativo criado em
 React Native, e tem por objetivo ajudar o usuário a lembrar da hora de regar suas plantas, de forma bem organizada.</p>
 <br>
+<p><strong>By </strong>Thiago de Andrade</p
 
 # Preview
 
