@@ -64,7 +64,7 @@ npm install
 ```bash
 ipconfig
 ```
-* No projeto, substitua na linha 4 do arquivo api.ts com o Ip que se encontra, pelo da sua máquina, agora vamos iniciar o servidor da API
+* No projeto, substitua na linha 4 do arquivo api.ts com o Ip que se encontra, pelo da sua máquina. No proximo passo vamos iniciar o servidor da API
 
 * A partir da pasta principal do projeto(/plantmanager) execute o comando abaixo substituindo o IP pelo da sua máquina:
 ```bash
@@ -77,7 +77,7 @@ expo start
 
 * A partir desse momento será carregado uma pagina no browser (caso não carregar, entre no endereço <strong> http://localhost:19002</strong>)
 
-* Por ela você terá varias opções para para iniciar a aplicação escolhendo alguma opção do lado inferior esquerdo da tela
+* Por ela você terá varias opções para para iniciar a aplicação, que ficam no lado inferior esquerdo da tela
 
 * Qualquer duvida ou problema na execução dos passos pode entrar em contato
 
